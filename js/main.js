@@ -5,10 +5,17 @@ const app = new Vue({
 
         ],
         newTodo:``,
+        isDone:false,
     },
     methods:{
         addTodo(){
-            
+            if(this.newTodo!==``){
+            this.todos.push(this.newTodo);
+            this.newTodo=``;
         }
+    },
+    remove(index){
+        this.todos.splice(index,1)
     }
+}
 })

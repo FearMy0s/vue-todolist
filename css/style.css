@@ -11,14 +11,22 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.container ul{
+.todos-container {
     width: 1200px;
     margin: 0 auto;
-    display:  flex;
-    align-items: center;
     background-color: gray;
     font-size: 20px;
 }
-.cross{
-    justify-content: flex-end;
+.new-todo{
+    margin-left: 45%;
+    margin-bottom: 20px;
+
 }
+.todos-container li{
+    display: flex;
+    justify-content: space-between;
+}
+.cross{
+    padding-right: 10px;
+}
+

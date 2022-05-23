@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+    
 </head>
 <body>
     <head>  
         <img class="img" src="img/Logo-RGB-1920-BLUE.png" alt="">
-    </head>
+    </head> 
     <main>
-        <div class="container">
-            <ul>
-                <li class="todo" v-for="todo in todos">{{ todo }}<i class="cross fas fa-times"></i></li>
-            </ul>
+        <div id="app">
+            <div class="new-todo">
+                <form @submit.prevent="addTodo()">
+                    <input type="text" placeholder="Nuova Task" v-model="newTodo" required/>
+                    <button type="submit">Aggiungi</button>
+                </form>
+            </div>
+            <div class="todos-container">
+                <ul>
+                    <li class="todo" v-for="(todo, index) in todos">{{ todo }}<i @click="remove(Index)" class="cross fas fa-times"></i></li>
+                </ul>
+            </div>
         </div>
-
+        
+        <script src="js/main.js"></script>
     </main>
     
 </body>
