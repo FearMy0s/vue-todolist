@@ -13,11 +13,17 @@ const app = new Vue({
         addTodo(){
             if(this.newTodo.text!==``){
             this.todos.push(this.newTodo);
-            this.newTodo=``;
+            this.newTodo = {
+                text:``,
+                isDone:false,
+            }
         }
     },
     remove(index){
         this.todos.splice(index,1)
-    }
+    },
+    Done(index) {
+        this.todos[index].isDone = !this.todos[index].isDone;
+    },
 }
 })

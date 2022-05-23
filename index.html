@@ -25,7 +25,7 @@
             </div>
             <div class="todos-container">
                 <ul>
-                    <li class="todo" v-for="(todo, index) in todos">{{ todo }}<i @click="remove(index)" class="cross fas fa-times"></i></li>
+                    <li :class="todo" v-for="(todo, index) in todos">{{ todo }}<i @click="remove(index)" class="cross fas fa-times"></i></li>
                 </ul>
             </div>
         </div>
