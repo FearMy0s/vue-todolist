@@ -4,12 +4,14 @@ const app = new Vue({
         todos: [
 
         ],
-        newTodo:``,
+        newTodo: {
+        text: ``,
         isDone:false,
-    },
+        }
+    },  
     methods:{
         addTodo(){
-            if(this.newTodo!==``){
+            if(this.newTodo.text!==``){
             this.todos.push(this.newTodo);
             this.newTodo=``;
         }
