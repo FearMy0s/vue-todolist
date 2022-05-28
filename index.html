@@ -19,13 +19,13 @@
         <div id="app">
             <div class="new-todo">
                 <form @submit.prevent="addTodo()">
-                    <input type="text" placeholder="Task" v-model="newTodo" required/>
+                    <input type="text" placeholder="Task" v-model="newTodo.text" required/>
                     <button type="submit">Aggiungi</button>
                 </form>
             </div>
             <div class="todos-container">
                 <ul>
-                    <li :class="todo" v-for="(todo, index) in todos">{{ todo }}<i @click="remove(index)" class="cross fas fa-times"></i></li>
+                    <li :class="todo" v-for="(todo, index) in todos">{{ todo.text }}<i @click="remove(index)" class="cross fas fa-times"></i></li>
                 </ul>
             </div>
         </div>

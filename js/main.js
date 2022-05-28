@@ -4,10 +4,7 @@ const app = new Vue({
         todos: [
 
         ],
-        newTodo: {
-        text: ``,
-        isDone:false,
-        }
+        newTodo: ``,
     },  
     methods:{
         addTodo(){
